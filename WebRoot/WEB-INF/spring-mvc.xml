@@ -19,7 +19,19 @@
             http://www.springframework.org/schema/context
             http://www.springframework.org/schema/context/spring-context-3.0.xsd">
             
-	<context:component-scan base-package="com.test"></context:component-scan>
+	<context:component-scan base-package="com.bling"></context:component-scan>
+	
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+      <property name="prefix" value="/WEB-INF/jsp/" />
+      <property name="suffix" value=".jsp" />
+   </bean>
+   
+   <!-- 这里使用<mvc:resources ..../>标记来映射静态页面。
+   		映射属性必须是指定http请求的URL模式的Ant模式。
+   		location属性必须指定一个或多个有效的资源目录位置，其中包含静态页面，包括图片，样式表，JavaScript和其他静态内容。
+   		可以使用逗号分隔的值列表指定多个资源位置。 -->
+   <mvc:resources mapping="/jsp/**" location="/WEB-INF/jsp/"/>
+   <mvc:annotation-driven/>
 	
 </beans>
     
