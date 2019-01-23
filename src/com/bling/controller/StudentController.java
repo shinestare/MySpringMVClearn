@@ -1,7 +1,12 @@
 package com.bling.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.validation.Validator;
+import org.springframework.web.bind.WebDataBinder;
+import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -42,9 +47,9 @@ public class StudentController {
 	public String addStudent(@ModelAttribute("springWeb") Student student,
 			ModelMap model) {
 		model.addAttribute("name", student.getName());
-		System.out.println(student.getName());
 		model.addAttribute("age", student.getAge());
 		model.addAttribute("id", student.getId());
+		model.addAttribute("gender", student.getGender());
 		
 		return "studentResult";
 	}

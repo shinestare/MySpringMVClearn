@@ -27,6 +27,14 @@
 				<td><form:input path="id"/></td>
 			</tr>
 			<tr>
+				<%-- 这里使用<form:hidden />标签来呈现HTML隐藏字段域。
+				 例如 - 	<form:hidden path="id" value="1000"/>
+				它将呈现以下HTML内容。
+						<input id="id" name="id" type="hidden" value="1000"/> --%>
+				<td></td>
+				<td><form:hidden path="gender" value="a" /></td>
+			</tr>
+			<tr>
 				<td colspan="2">
 					<input type="submit" value="提交"/>
 				</td>

@@ -22,6 +22,10 @@
 			<td>编号：</td>
 			<td>${id}</td>
 		</tr>
+		<tr>
+			<td>性别：</td>
+			<td>${gender}</td>
+		</tr>
 	</table>
 </body>
 </html>

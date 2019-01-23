@@ -22,7 +22,42 @@
       <tr>
          <td>地址：</td>
          <td>${address}</td>
+      </tr>
+      <tr>
+         <td>是否订阅新闻</td>
+         <td>${receivePaper}</td>
       </tr> 
+      <tr>
+         <td>喜欢的技术/框架</td>
+         <td> <% String[] favoriteFrameworks = (String[])request.getAttribute("favoriteFrameworks");
+            for(String framework: favoriteFrameworks) {
+               out.println(framework);
+            }
+         %></td>
+      </tr>
+      <tr>
+		<td>性别：</td>
+		<td>${(gender=="M"? "男" : "女")}</td>
+	  </tr>
+	  <tr>
+         <td>喜欢的数字：</td>
+         <td>${favoriteNumber}</td>
+      </tr>
+      <tr>
+         <td>国家：</td>
+         <td>${country}</td>
+      </tr>
+      <tr>
+	      <td>技术：</td>
+	      <td>
+	          <%
+	              String[] skills = (String[]) request.getAttribute("skills");
+	                  for (String skill : skills) {
+	                      out.println(skill);
+	                  }
+	          %>
+	      </td>
+      </tr>
    	</table>
 </body>
 </html>

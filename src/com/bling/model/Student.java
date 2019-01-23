@@ -4,6 +4,7 @@ public class Student {
 	private Integer age;
 	private String name;
 	private Integer id;
+	private String gender;
 	
 	public Integer getAge() {
 		return age;
@@ -22,6 +23,12 @@ public class Student {
 	}
 	public void setId(Integer id) {
 		this.id = id;
+	}
+	public String getGender() {
+		return gender;
+	}
+	public void setGender(String gender) {
+		this.gender = gender;
 	}
 	
 }

@@ -26,6 +26,9 @@
       <property name="suffix" value=".jsp" />
    </bean>
    
+	<bean id="multipartResolver"
+	        class="org.springframework.web.multipart.commons.CommonsMultipartResolver" />
+   
    <!-- 这里使用<mvc:resources ..../>标记来映射静态页面。
    		映射属性必须是指定http请求的URL模式的Ant模式。
    		location属性必须指定一个或多个有效的资源目录位置，其中包含静态页面，包括图片，样式表，JavaScript和其他静态内容。
