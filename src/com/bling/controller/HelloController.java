@@ -1,17 +1,22 @@
 package com.bling.controller;
 
+import javax.servlet.http.HttpServletResponse;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+
+import com.bling.others.ResourceNotFoundException;
+
 import org.springframework.ui.ModelMap;
 
 /**
- * Spring MVC Hello WorldÊ¾Àı
- *	1¡¢µ¼Èëjar°ü
- *	2¡¢´´½¨ControllerÀà
- *	3¡¢WebContent/WEB-INFÎÄ¼ş¼ĞÏÂ´´½¨SpringÅäÖÃÎÄ¼şweb.xmlºÍHelloWeb-servlet.xml¡£
- *	4¡¢ÔÚWebContent/WEB-INFÎÄ¼ş¼ĞÏÂ´´½¨Ò»¸öÃûÎªjspµÄ×ÓÎÄ¼ş¼Ğ¡£ÔÚ´Ë×ÓÎÄ¼ş¼ĞÏÂ´´½¨ÊÓÍ¼ÎÄ¼şhello.jsp
- *	5¡¢´´½¨ËùÓĞÔ´ºÍÅäÖÃÎÄ¼şµÄÄÚÈİ²¢µ¼³öÓ¦ÓÃ³ÌĞò»òÖ±½ÓÔÚEclipseÖĞÔËĞĞ¡£²Î¿¼web.xmlºÍspring-mvc.xmlºÍjsp/hello.jspÎÄ¼şµÄÄÚÈİ
+ * Spring MVC Hello Worldç¤ºä¾‹
+ *	1ã€å¯¼å…¥jaråŒ…
+ *	2ã€åˆ›å»ºControllerç±»
+ *	3ã€WebContent/WEB-INFæ–‡ä»¶å¤¹ä¸‹åˆ›å»ºSpringé…ç½®æ–‡ä»¶web.xmlå’ŒHelloWeb-servlet.xmlã€‚
+ *	4ã€åœ¨WebContent/WEB-INFæ–‡ä»¶å¤¹ä¸‹åˆ›å»ºä¸€ä¸ªåä¸ºjspçš„å­æ–‡ä»¶å¤¹ã€‚åœ¨æ­¤å­æ–‡ä»¶å¤¹ä¸‹åˆ›å»ºè§†å›¾æ–‡ä»¶hello.jsp
+ *	5ã€åˆ›å»ºæ‰€æœ‰æºå’Œé…ç½®æ–‡ä»¶çš„å†…å®¹å¹¶å¯¼å‡ºåº”ç”¨ç¨‹åºæˆ–ç›´æ¥åœ¨Eclipseä¸­è¿è¡Œã€‚å‚è€ƒweb.xmlå’Œspring-mvc.xmlå’Œjsp/hello.jspæ–‡ä»¶çš„å†…å®¹
  * 
  * @author wangjian31
  * 
@@ -21,9 +26,15 @@ import org.springframework.ui.ModelMap;
 public class HelloController {
 	
 	@RequestMapping(method = RequestMethod.GET)
-	public String printHello(ModelMap model){
-		model.addAttribute("message", "Hello Spring MVC Framework!");
-		
-		return "hello";
+	public String printHello(ModelMap model, HttpServletResponse response){
+		boolean dealed = true;
+		if (dealed) {
+			model.addAttribute("message", "Hello Spring MVC Framework!");
+			return "hello";
+		} else {
+//			response.setStatus(HttpServletResponse.SC_NOT_FOUND);//è®¾ç½®çŠ¶æ€ç ï¼Œå¥½åƒæ²¡ä»€ä¹ˆç”¨
+//			response.sendError(HttpServletResponse.SC_NOT_FOUND, "æˆ‘è¯´èµ„æºæ²¡æœ‰æ‰¾åˆ°ä½ ä¿¡å—");//è®¾ç½®çŠ¶æ€ç ï¼Œå¥½åƒæœ‰é—®é¢˜ï¼Œä¸çŸ¥é“ä¸ºä»€ä¹ˆ
+			throw new ResourceNotFoundException();//æŠŠè¿™ä¸ªå¼‚å¸¸æŠ›å‡ºï¼Œå°±èƒ½è¿”å›å¼‚å¸¸ç±»æ ‡æ³¨çš„çŠ¶æ€ç 
+		}
 	}
 }

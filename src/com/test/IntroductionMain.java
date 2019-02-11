@@ -7,26 +7,26 @@ package com.test;
  */
 public class IntroductionMain {
 	/**
-	 * Spring web MVC¿ò¼ÜÌá¹©ÁËMVC(Ä£ÐÍ - ÊÓÍ¼ - ¿ØÖÆÆ÷)¼Ü¹¹ºÍÓÃÓÚ¿ª·¢Áé»îºÍËÉÉ¢ñîºÏµÄWebÓ¦ÓÃ³ÌÐòµÄ×é¼þ¡£
-	 *  MVCÄ£Ê½µ¼ÖÂÓ¦ÓÃ³ÌÐòµÄ²»Í¬·½Ãæ(ÊäÈëÂß¼­£¬ÒµÎñÂß¼­ºÍUIÂß¼­)·ÖÀë£¬Í¬Ê±Ìá¹©ÕâÐ©ÔªËØÖ®¼äµÄËÉÉ¢ñîºÏ¡£
-	 *  	Ä£ÐÍ(Model)·â×°ÁËÓ¦ÓÃ³ÌÐòÊý¾Ý£¬Í¨³£ËüÃÇ½«ÓÉPOJOÀà×é³É¡£
-	 *  	ÊÓÍ¼(View)¸ºÔðäÖÈ¾Ä£ÐÍÊý¾Ý£¬Ò»°ãÀ´ËµËüÉú³É¿Í»§¶Ëä¯ÀÀÆ÷¿ÉÒÔ½âÊÍHTMLÊä³ö¡£
-	 *  	¿ØÖÆÆ÷(Controller)¸ºÔð´¦ÀíÓÃ»§ÇëÇó²¢¹¹½¨ÊÊµ±µÄÄ£ÐÍ£¬²¢½«Æä´«µÝ¸øÊÓÍ¼½øÐÐäÖÈ¾¡£
+	 * Spring web MVCæ¡†æž¶æä¾›äº†MVC(æ¨¡åž‹ - è§†å›¾ - æŽ§åˆ¶å™¨)æž¶æž„å’Œç”¨äºŽå¼€å‘çµæ´»å’Œæ¾æ•£è€¦åˆçš„Webåº”ç”¨ç¨‹åºçš„ç»„ä»¶ã€‚
+	 *  MVCæ¨¡å¼å¯¼è‡´åº”ç”¨ç¨‹åºçš„ä¸åŒæ–¹é¢(è¾“å…¥é€»è¾‘ï¼Œä¸šåŠ¡é€»è¾‘å’ŒUIé€»è¾‘)åˆ†ç¦»ï¼ŒåŒæ—¶æä¾›è¿™äº›å…ƒç´ ä¹‹é—´çš„æ¾æ•£è€¦åˆã€‚
+	 *  	æ¨¡åž‹(Model)å°è£…äº†åº”ç”¨ç¨‹åºæ•°æ®ï¼Œé€šå¸¸å®ƒä»¬å°†ç”±POJOç±»ç»„æˆã€‚
+	 *  	è§†å›¾(View)è´Ÿè´£æ¸²æŸ“æ¨¡åž‹æ•°æ®ï¼Œä¸€èˆ¬æ¥è¯´å®ƒç”Ÿæˆå®¢æˆ·ç«¯æµè§ˆå™¨å¯ä»¥è§£é‡ŠHTMLè¾“å‡ºã€‚
+	 *  	æŽ§åˆ¶å™¨(Controller)è´Ÿè´£å¤„ç†ç”¨æˆ·è¯·æ±‚å¹¶æž„å»ºé€‚å½“çš„æ¨¡åž‹ï¼Œå¹¶å°†å…¶ä¼ é€’ç»™è§†å›¾è¿›è¡Œæ¸²æŸ“ã€‚
 	 */
 	/**
-	 * DispatcherServlet×é¼þÀà
-	 * Spring WebÄ£ÐÍ - ÊÓÍ¼ - ¿ØÖÆÆ÷(MVC)¿ò¼ÜÊÇÎ§ÈÆDispatcherServletÉè¼ÆµÄ£¬Ëü´¦ÀíËùÓÐµÄHTTPÇëÇóºÍÏìÓ¦¡£ 
-	 * ÒÔÏÂÊÇ¶ÔÓ¦ÓÚµ½DispatcherServletµÄ´«ÈëHTTPÇëÇóµÄÊÂ¼þË³Ðò£º
-	 * 	1¡¢ÔÚ½ÓÊÕµ½HTTPÇëÇóºó£¬DispatcherServlet»á²éÑ¯HandlerMappingÒÔµ÷ÓÃÏàÓ¦µÄController¡£
-	 * 	2¡¢Controller½ÓÊÜÇëÇó²¢¸ù¾ÝÊ¹ÓÃµÄGET»òPOST·½·¨µ÷ÓÃÏàÓ¦µÄ·þÎñ·½·¨¡£ ·þÎñ·½·¨½«»ùÓÚ¶¨ÒåµÄÒµÎñÂß¼­ÉèÖÃÄ£ÐÍÊý¾Ý£¬²¢½«ÊÓÍ¼Ãû³Æ·µ»Ø¸øDispatcherServlet¡£
-	 * 	3¡¢DispatcherServlet½«´ÓViewResolver»ñÈ¡ÇëÇóµÄ¶¨ÒåÊÓÍ¼¡£
-	 * 	4¡¢µ±ÊÓÍ¼Íê³É£¬DispatcherServlet½«Ä£ÐÍÊý¾Ý´«µÝµ½×îÖÕµÄÊÓÍ¼£¬²¢ÔÚä¯ÀÀÆ÷ÉÏ³ÊÏÖ¡£
-	 * ËùÓÐÉÏÊö×é¼þ£¬¼´: HandlerMapping£¬ControllerºÍViewResolverÊÇWebApplicationContextµÄÒ»²¿·Ö£¬ËüÊÇÆÕÍ¨ApplicationContextµÄÀ©Õ¹£¬´øÓÐWebÓ¦ÓÃ³ÌÐòËùÐèµÄÒ»Ð©¶îÍâ¹¦ÄÜ¡£
+	 * DispatcherServletç»„ä»¶ç±»
+	 * Spring Webæ¨¡åž‹ - è§†å›¾ - æŽ§åˆ¶å™¨(MVC)æ¡†æž¶æ˜¯å›´ç»•DispatcherServletè®¾è®¡çš„ï¼Œå®ƒå¤„ç†æ‰€æœ‰çš„HTTPè¯·æ±‚å’Œå“åº”ã€‚ 
+	 * ä»¥ä¸‹æ˜¯å¯¹åº”äºŽåˆ°DispatcherServletçš„ä¼ å…¥HTTPè¯·æ±‚çš„äº‹ä»¶é¡ºåºï¼š
+	 * 	1ã€åœ¨æŽ¥æ”¶åˆ°HTTPè¯·æ±‚åŽï¼ŒDispatcherServletä¼šæŸ¥è¯¢HandlerMappingä»¥è°ƒç”¨ç›¸åº”çš„Controllerã€‚
+	 * 	2ã€ControlleræŽ¥å—è¯·æ±‚å¹¶æ ¹æ®ä½¿ç”¨çš„GETæˆ–POSTæ–¹æ³•è°ƒç”¨ç›¸åº”çš„æœåŠ¡æ–¹æ³•ã€‚ æœåŠ¡æ–¹æ³•å°†åŸºäºŽå®šä¹‰çš„ä¸šåŠ¡é€»è¾‘è®¾ç½®æ¨¡åž‹æ•°æ®ï¼Œå¹¶å°†è§†å›¾åç§°è¿”å›žç»™DispatcherServletã€‚
+	 * 	3ã€DispatcherServletå°†ä»ŽViewResolverèŽ·å–è¯·æ±‚çš„å®šä¹‰è§†å›¾ã€‚
+	 * 	4ã€å½“è§†å›¾å®Œæˆï¼ŒDispatcherServletå°†æ¨¡åž‹æ•°æ®ä¼ é€’åˆ°æœ€ç»ˆçš„è§†å›¾ï¼Œå¹¶åœ¨æµè§ˆå™¨ä¸Šå‘ˆçŽ°ã€‚
+	 * æ‰€æœ‰ä¸Šè¿°ç»„ä»¶ï¼Œå³: HandlerMappingï¼ŒControllerå’ŒViewResolveræ˜¯WebApplicationContextçš„ä¸€éƒ¨åˆ†ï¼Œå®ƒæ˜¯æ™®é€šApplicationContextçš„æ‰©å±•ï¼Œå¸¦æœ‰Webåº”ç”¨ç¨‹åºæ‰€éœ€çš„ä¸€äº›é¢å¤–åŠŸèƒ½ã€‚
 	 */
 	/**
-	 * ±ØÐèµÄÅäÖÃ
-	 * ÐèÒªÍ¨¹ýÊ¹ÓÃweb.xmlÎÄ¼þÖÐµÄURLÓ³ÉäÀ´Ó³ÉäÏ£ÍûDispatcherServlet´¦ÀíµÄÇëÇó¡£ 
-	 * ÏÂÃæÊÇÒ»¸öÊ¾ÀýÀ´ÏÔÊ¾HelloWeb DispatcherServletÊ¾ÀýµÄÉùÃ÷ºÍÓ³Éä£º
+	 * å¿…éœ€çš„é…ç½®
+	 * éœ€è¦é€šè¿‡ä½¿ç”¨web.xmlæ–‡ä»¶ä¸­çš„URLæ˜ å°„æ¥æ˜ å°„å¸Œæœ›DispatcherServletå¤„ç†çš„è¯·æ±‚ã€‚ 
+	 * ä¸‹é¢æ˜¯ä¸€ä¸ªç¤ºä¾‹æ¥æ˜¾ç¤ºHelloWeb DispatcherServletç¤ºä¾‹çš„å£°æ˜Žå’Œæ˜ å°„ï¼š
 	 * <web-app id="WebApp_ID" version="2.4"
 		    xmlns="http://java.sun.com/xml/ns/j2ee" 
 		    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -50,11 +50,11 @@ public class IntroductionMain {
 		
 		</web-app>
 		
-		ËµÃ÷£ºweb.xmlÎÄ¼þ½«±£´æWebÓ¦ÓÃ³ÌÐòµÄWebContent/WEB-INFÄ¿Â¼¡£
-		ÔÚHelloWeb DispatcherServlet³õÊ¼»¯Ê±£¬¿ò¼Ü½«³¢ÊÔ´ÓÎ»ÓÚÓ¦ÓÃ³ÌÐòµÄWebContent/WEB-INFÄ¿Â¼ÖÐµÄÃûÎª[servlet-name]-servlet.xmlµÄÎÄ¼þ¼ÓÔØÓ¦ÓÃ³ÌÐòÉÏÏÂÎÄ¡£
-		ÔÚÕâ¸öÊ¾ÀýÖÐ£¬Ê¹ÓÃµÄÎÄ¼þ½«ÊÇHelloWeb-servlet.xml¡£
-		½ÓÏÂÀ´£¬<servlet-mapping>±ê¼ÇÖ¸Ê¾ÄÄÐ©URL½«ÓÉDispatcherServlet´¦Àí¡£ ÕâÀïËùÓÐÒÔ.jsp½áÎ²µÄHTTPÇëÇó¶¼½«ÓÉHelloWeb DispatcherServlet´¦Àí¡£
-		Èç¹û²»ÏëÊ¹ÓÃÄ¬ÈÏÎÄ¼þÃûÎª[servlet-name]-servlet.xmlºÍÄ¬ÈÏÎ»ÖÃÎªWebContent/WEB-INF£¬¿ÉÒÔÍ¨¹ýÔÚweb.xmlÎÄ¼þÖÐÌí¼ÓservletÕìÌýÆ÷ContextLoaderListenerÀ´×Ô¶¨Òå´ËÎÄ¼þÃûºÍÎ»ÖÃ ÈçÏÂ£º
+		è¯´æ˜Žï¼šweb.xmlæ–‡ä»¶å°†ä¿å­˜Webåº”ç”¨ç¨‹åºçš„WebContent/WEB-INFç›®å½•ã€‚
+		åœ¨HelloWeb DispatcherServletåˆå§‹åŒ–æ—¶ï¼Œæ¡†æž¶å°†å°è¯•ä»Žä½äºŽåº”ç”¨ç¨‹åºçš„WebContent/WEB-INFç›®å½•ä¸­çš„åä¸º[servlet-name]-servlet.xmlçš„æ–‡ä»¶åŠ è½½åº”ç”¨ç¨‹åºä¸Šä¸‹æ–‡ã€‚
+		åœ¨è¿™ä¸ªç¤ºä¾‹ä¸­ï¼Œä½¿ç”¨çš„æ–‡ä»¶å°†æ˜¯HelloWeb-servlet.xmlã€‚
+		æŽ¥ä¸‹æ¥ï¼Œ<servlet-mapping>æ ‡è®°æŒ‡ç¤ºå“ªäº›URLå°†ç”±DispatcherServletå¤„ç†ã€‚ è¿™é‡Œæ‰€æœ‰ä»¥.jspç»“å°¾çš„HTTPè¯·æ±‚éƒ½å°†ç”±HelloWeb DispatcherServletå¤„ç†ã€‚
+		å¦‚æžœä¸æƒ³ä½¿ç”¨é»˜è®¤æ–‡ä»¶åä¸º[servlet-name]-servlet.xmlå’Œé»˜è®¤ä½ç½®ä¸ºWebContent/WEB-INFï¼Œå¯ä»¥é€šè¿‡åœ¨web.xmlæ–‡ä»¶ä¸­æ·»åŠ servletä¾¦å¬å™¨ContextLoaderListeneræ¥è‡ªå®šä¹‰æ­¤æ–‡ä»¶åå’Œä½ç½® å¦‚ä¸‹ï¼š
 		<web-app...>
 			<!-------- DispatcherServlet definition goes here----->
 			....
@@ -70,7 +70,7 @@ public class IntroductionMain {
 			</listener>
 		</web-app>
 		
-		ÏÖÔÚÀ´¿´¿´HelloWeb-servlet.xmlÎÄ¼þµÄ±ØÐèÅäÖÃ£¬·ÅÔÚWebÓ¦ÓÃ³ÌÐòµÄWebContent/WEB-INFÄ¿Â¼ÖÐ£º
+		çŽ°åœ¨æ¥çœ‹çœ‹HelloWeb-servlet.xmlæ–‡ä»¶çš„å¿…éœ€é…ç½®ï¼Œæ”¾åœ¨Webåº”ç”¨ç¨‹åºçš„WebContent/WEB-INFç›®å½•ä¸­ï¼š
 		
 		<beans xmlns="http://www.springframework.org/schema/beans"
 		   xmlns:context="http://www.springframework.org/schema/context"
@@ -89,16 +89,16 @@ public class IntroductionMain {
 		   </bean>
 		</beans>
 		
-		ÒÔÏÂÊÇÓÐ¹ØHelloWeb-servlet.xmlÎÄ¼þµÄÖØµãËµÃ÷£º
-			1¡¢[servlet-name]-servlet.xmlÎÄ¼þ½«ÓÃÓÚ´´½¨¶¨ÒåµÄbean£¬Ëü»á¸²¸ÇÔÚÈ«¾Ö·¶Î§ÖÐÊ¹ÓÃÏàÍ¬Ãû³Æ¶¨ÒåµÄÈÎºÎbeanµÄ¶¨Òå¡£
-			2¡¢<context£ºcomponent-scan ...>±êÇ©½«ÓÃÓÚ¼¤»îSpring MVC×¢ÊÍÉ¨Ãè¹¦ÄÜ£¬ÔÊÐíÊ¹ÓÃ@ControllerºÍ@RequestMappingµÈ×¢ÊÍ¡£
-			3¡¢InternalResourceViewResolver½«¶¨ÒåÓÃÓÚ½âÎöÊÓÍ¼Ãû³ÆµÄ¹æÔò¡£
-		¸ù¾ÝÉÏÃæ¶¨ÒåµÄ¹æÔò£¬helloµÄÂß¼­ÊÓÍ¼½«Î¯ÍÐ¸øÎ»ÓÚ/WEB-INF/jsp/hello.jspÕâ¸öÊÓÍ¼À´ÊµÏÖ¡£ÏÂÒ»½Ú½«ÑÝÊ¾ÈçºÎ´´½¨Êµ¼Ê×é¼þ¡£¼´£º¿ØÖÆÆ÷£¬Ä£ÐÍºÍÊÓÍ¼¡£
+		ä»¥ä¸‹æ˜¯æœ‰å…³HelloWeb-servlet.xmlæ–‡ä»¶çš„é‡ç‚¹è¯´æ˜Žï¼š
+			1ã€[servlet-name]-servlet.xmlæ–‡ä»¶å°†ç”¨äºŽåˆ›å»ºå®šä¹‰çš„beanï¼Œå®ƒä¼šè¦†ç›–åœ¨å…¨å±€èŒƒå›´ä¸­ä½¿ç”¨ç›¸åŒåç§°å®šä¹‰çš„ä»»ä½•beançš„å®šä¹‰ã€‚
+			2ã€<contextï¼šcomponent-scan ...>æ ‡ç­¾å°†ç”¨äºŽæ¿€æ´»Spring MVCæ³¨é‡Šæ‰«æåŠŸèƒ½ï¼Œå…è®¸ä½¿ç”¨@Controllerå’Œ@RequestMappingç­‰æ³¨é‡Šã€‚
+			3ã€InternalResourceViewResolverå°†å®šä¹‰ç”¨äºŽè§£æžè§†å›¾åç§°çš„è§„åˆ™ã€‚
+		æ ¹æ®ä¸Šé¢å®šä¹‰çš„è§„åˆ™ï¼Œhelloçš„é€»è¾‘è§†å›¾å°†å§”æ‰˜ç»™ä½äºŽ/WEB-INF/jsp/hello.jspè¿™ä¸ªè§†å›¾æ¥å®žçŽ°ã€‚ä¸‹ä¸€èŠ‚å°†æ¼”ç¤ºå¦‚ä½•åˆ›å»ºå®žé™…ç»„ä»¶ã€‚å³ï¼šæŽ§åˆ¶å™¨ï¼Œæ¨¡åž‹å’Œè§†å›¾ã€‚
 	 */
 	
 	/**
-	 * ¶¨Òå¿ØÖÆÆ÷
-	 * DispatcherServlet½«ÇëÇóÎ¯ÅÉ¸ø¿ØÖÆÆ÷ÒÔÖ´ÐÐÌØ¶¨ÓÚÆäµÄ¹¦ÄÜ¡£ @Controller×¢ÊÍÖ¸Ê¾ÌØ¶¨Àà³äµ±¿ØÖÆÆ÷µÄ½ÇÉ«¡£@RequestMapping×¢ÊÍÓÃÓÚ½«URLÓ³Éäµ½Õû¸öÀà»òÌØ¶¨´¦Àí³ÌÐò·½·¨¡£
+	 * å®šä¹‰æŽ§åˆ¶å™¨
+	 * DispatcherServletå°†è¯·æ±‚å§”æ´¾ç»™æŽ§åˆ¶å™¨ä»¥æ‰§è¡Œç‰¹å®šäºŽå…¶çš„åŠŸèƒ½ã€‚ @Controlleræ³¨é‡ŠæŒ‡ç¤ºç‰¹å®šç±»å……å½“æŽ§åˆ¶å™¨çš„è§’è‰²ã€‚@RequestMappingæ³¨é‡Šç”¨äºŽå°†URLæ˜ å°„åˆ°æ•´ä¸ªç±»æˆ–ç‰¹å®šå¤„ç†ç¨‹åºæ–¹æ³•ã€‚
 	 * 	@Controller
 		@RequestMapping("/hello")
 		public class HelloController{
@@ -109,11 +109,11 @@ public class IntroductionMain {
 		   }
 		}
 		
-		ËµÃ÷£º@Controller×¢ÊÍ½«Àà¶¨ÒåÎªSpring MVC¿ØÖÆÆ÷¡£
-			ÕâÀï@RequestMappingµÄµÚÒ»¸öÓÃ·¨±íÊ¾´Ë¿ØÖÆÆ÷ÉÏµÄËùÓÐ´¦Àí·½·¨¶¼Óë/helloÂ·¾¶Ïà¹Ø¡£ 
-			ÏÂÒ»¸ö×¢ÊÍ@RequestMapping(method = RequestMethod.GET)ÓÃÓÚÉùÃ÷printHello()·½·¨×÷Îª¿ØÖÆÆ÷µÄÄ¬ÈÏ·þÎñ·½·¨À´´¦ÀíHTTP GETÇëÇó¡£
-			¿ÉÒÔ¶¨ÒåÁíÒ»¸ö·½·¨À´´¦ÀíÍ¬Ò»URLµÄÈÎºÎPOSTÇëÇó¡£
-		¿ÉÒÔÒÔÁíÒ»ÖÖÐÎÊ½ÔÚÉÏÃæµÄ¿ØÖÆÆ÷ÖÐ±àÐ´£¬ÔÚ@RequestMappingÖÐÌí¼ÓÆäËûÊôÐÔ£¬ÈçÏÂËùÊ¾£º
+		è¯´æ˜Žï¼š@Controlleræ³¨é‡Šå°†ç±»å®šä¹‰ä¸ºSpring MVCæŽ§åˆ¶å™¨ã€‚
+			è¿™é‡Œ@RequestMappingçš„ç¬¬ä¸€ä¸ªç”¨æ³•è¡¨ç¤ºæ­¤æŽ§åˆ¶å™¨ä¸Šçš„æ‰€æœ‰å¤„ç†æ–¹æ³•éƒ½ä¸Ž/helloè·¯å¾„ç›¸å…³ã€‚ 
+			ä¸‹ä¸€ä¸ªæ³¨é‡Š@RequestMapping(method = RequestMethod.GET)ç”¨äºŽå£°æ˜ŽprintHello()æ–¹æ³•ä½œä¸ºæŽ§åˆ¶å™¨çš„é»˜è®¤æœåŠ¡æ–¹æ³•æ¥å¤„ç†HTTP GETè¯·æ±‚ã€‚
+			å¯ä»¥å®šä¹‰å¦ä¸€ä¸ªæ–¹æ³•æ¥å¤„ç†åŒä¸€URLçš„ä»»ä½•POSTè¯·æ±‚ã€‚
+		å¯ä»¥ä»¥å¦ä¸€ç§å½¢å¼åœ¨ä¸Šé¢çš„æŽ§åˆ¶å™¨ä¸­ç¼–å†™ï¼Œåœ¨@RequestMappingä¸­æ·»åŠ å…¶ä»–å±žæ€§ï¼Œå¦‚ä¸‹æ‰€ç¤ºï¼š
 		
 			@Controller
 			public class HelloController{
@@ -125,17 +125,17 @@ public class IntroductionMain {
 			   }
 			}
 		
-		valueÊôÐÔÖ¸Ê¾´¦Àí³ÌÐò·½·¨Ó³Éäµ½µÄURL£¬methodÊôÐÔ¶¨Òå´¦ÀíHTTP GETÇëÇóµÄ·þÎñ·½·¨¡£
-		¹ØÓÚÒÔÉÏ¶¨ÒåµÄ¿ØÖÆÆ÷£¬ÐèÒª×¢ÒâÒÔÏÂ¼¸µã£º
-			1¡¢ÔÚ·þÎñ·½·¨ÖÐ¶¨ÒåËùÐèµÄÒµÎñÂß¼­¡£¿ÉÒÔ¸ù¾ÝÐèÒªÔÚ´Ë·½·¨ÄÚµ÷ÓÃÆäËû·½·¨¡£
-			2¡¢»ùÓÚ¶¨ÒåµÄÒµÎñÂß¼­£¬½«ÔÚ´Ë·½·¨ÖÐ´´½¨Ò»¸öÄ£ÐÍ¡£¿ÉÒÔÉèÖÃ²»Í¬µÄÄ£ÐÍÊôÐÔ£¬ÕâÐ©ÊôÐÔ½«±»ÊÓÍ¼·ÃÎÊÒÔ³ÊÏÖ×îÖÕ½á¹û¡£´ËÊ¾Àý´´½¨ÇÒÓÐÊôÐÔ¡°message¡±µÄÄ£ÐÍ¡£
-			3¡¢¶¨ÒåµÄ·þÎñ·½·¨¿ÉÒÔ·µ»ØÒ»¸öString£¬Ëü°üº¬ÒªÓÃÓÚäÖÈ¾Ä£ÐÍµÄÊÓÍ¼µÄÃû³Æ¡£´ËÊ¾Àý½«¡°hello¡±·µ»ØÎªÂß¼­ÊÓÍ¼Ãû³Æ¡£
+		valueå±žæ€§æŒ‡ç¤ºå¤„ç†ç¨‹åºæ–¹æ³•æ˜ å°„åˆ°çš„URLï¼Œmethodå±žæ€§å®šä¹‰å¤„ç†HTTP GETè¯·æ±‚çš„æœåŠ¡æ–¹æ³•ã€‚
+		å…³äºŽä»¥ä¸Šå®šä¹‰çš„æŽ§åˆ¶å™¨ï¼Œéœ€è¦æ³¨æ„ä»¥ä¸‹å‡ ç‚¹ï¼š
+			1ã€åœ¨æœåŠ¡æ–¹æ³•ä¸­å®šä¹‰æ‰€éœ€çš„ä¸šåŠ¡é€»è¾‘ã€‚å¯ä»¥æ ¹æ®éœ€è¦åœ¨æ­¤æ–¹æ³•å†…è°ƒç”¨å…¶ä»–æ–¹æ³•ã€‚
+			2ã€åŸºäºŽå®šä¹‰çš„ä¸šåŠ¡é€»è¾‘ï¼Œå°†åœ¨æ­¤æ–¹æ³•ä¸­åˆ›å»ºä¸€ä¸ªæ¨¡åž‹ã€‚å¯ä»¥è®¾ç½®ä¸åŒçš„æ¨¡åž‹å±žæ€§ï¼Œè¿™äº›å±žæ€§å°†è¢«è§†å›¾è®¿é—®ä»¥å‘ˆçŽ°æœ€ç»ˆç»“æžœã€‚æ­¤ç¤ºä¾‹åˆ›å»ºä¸”æœ‰å±žæ€§â€œmessageâ€çš„æ¨¡åž‹ã€‚
+			3ã€å®šä¹‰çš„æœåŠ¡æ–¹æ³•å¯ä»¥è¿”å›žä¸€ä¸ªStringï¼Œå®ƒåŒ…å«è¦ç”¨äºŽæ¸²æŸ“æ¨¡åž‹çš„è§†å›¾çš„åç§°ã€‚æ­¤ç¤ºä¾‹å°†â€œhelloâ€è¿”å›žä¸ºé€»è¾‘è§†å›¾åç§°ã€‚
 	 */
 	
 	/**
-	 * ´´½¨JSPÊÓÍ¼Spring
-	 *  MVCÖ§³ÖÐí¶àÀàÐÍµÄÊÓÍ¼ÓÃÓÚ²»Í¬µÄ±íÊ¾¼¼Êõ¡£°üÀ¨ - JSP£¬HTML£¬PDF£¬Excel¹¤×÷±í£¬XML£¬VelocityÄ£°å£¬XSLT£¬JSON£¬Atom ºÍ RSS Ô´£¬JasperReportsµÈ¡£
-	 *  µ«×î³£¼ûµÄÊÇÊ¹ÓÃJSPL±àÐ´µÄJSPÄ£°å£¬ÕâÀïÊ¹ÓÃµÄÊÇJSPÄ£°å£¬²¢ÔÚ/WEB-INF/hello/hello.jspÖÐÐ´Ò»¸ö¼òµ¥µÄhelloÊÓÍ¼£º
+	 * åˆ›å»ºJSPè§†å›¾Spring
+	 *  MVCæ”¯æŒè®¸å¤šç±»åž‹çš„è§†å›¾ç”¨äºŽä¸åŒçš„è¡¨ç¤ºæŠ€æœ¯ã€‚åŒ…æ‹¬ - JSPï¼ŒHTMLï¼ŒPDFï¼ŒExcelå·¥ä½œè¡¨ï¼ŒXMLï¼ŒVelocityæ¨¡æ¿ï¼ŒXSLTï¼ŒJSONï¼ŒAtom å’Œ RSS æºï¼ŒJasperReportsç­‰ã€‚
+	 *  ä½†æœ€å¸¸è§çš„æ˜¯ä½¿ç”¨JSPLç¼–å†™çš„JSPæ¨¡æ¿ï¼Œè¿™é‡Œä½¿ç”¨çš„æ˜¯JSPæ¨¡æ¿ï¼Œå¹¶åœ¨/WEB-INF/hello/hello.jspä¸­å†™ä¸€ä¸ªç®€å•çš„helloè§†å›¾ï¼š
 	 *  <html>
 		   <head>
 		   		<title>Hello Spring MVC</title>
@@ -145,10 +145,10 @@ public class IntroductionMain {
 		   </body>
 		</html>
 		
-		ËµÃ÷£ºÕâÀï${message}ÊÇÔÚControllerÖÐÉèÖÃµÄÊôÐÔ¡£¿ÉÒÔÔÚÊÓÍ¼ÖÐÏÔÊ¾¶à¸öÊôÐÔ¡£
+		è¯´æ˜Žï¼šè¿™é‡Œ${message}æ˜¯åœ¨Controllerä¸­è®¾ç½®çš„å±žæ€§ã€‚å¯ä»¥åœ¨è§†å›¾ä¸­æ˜¾ç¤ºå¤šä¸ªå±žæ€§ã€‚
 	 */
 	public static void main(String[] args) {
-		// 0¡¢Ä¬ÈÏÒýÈëspringMVC¿ò¼Ü£¬ÒýÈëjar°ü£¬ÅäÖÃweb.xml£¬ÅäÖÃspring-mvc.xml
+		// 0ã€é»˜è®¤å¼•å…¥springMVCæ¡†æž¶ï¼Œå¼•å…¥jaråŒ…ï¼Œé…ç½®web.xmlï¼Œé…ç½®spring-mvc.xml
 		/**
 		 * servlet-api-x.y.z.jar
 		 * commons-logging-x.y.z.jar
@@ -161,16 +161,16 @@ public class IntroductionMain {
 		 * spring-web-x.y.z.jar		
 		 */
 		
-		// 1¡¢Spring MVC Hello WorldÊ¾Àý¡£²Î¿¼ÎÄ¼þHelloController.javaºÍhello.jsp
+		// 1ã€Spring MVC Hello Worldç¤ºä¾‹ã€‚å‚è€ƒæ–‡ä»¶HelloController.javaå’Œhello.jsp
 		
-		// 2¡¢Spring MVC Ìá½»±íµ¥¡£²Î¿¼ÎÄ¼þ Student.java ºÍ StudentController.java ºÍ student.jsp ºÍ studentResult.jsp
+		// 2ã€Spring MVC æäº¤è¡¨å•ã€‚å‚è€ƒæ–‡ä»¶ Student.java å’Œ StudentController.java å’Œ student.jsp å’Œ studentResult.jsp
 
-		// 3¡¢Spring MVC ¾²Ì¬Ò³Ãæ¡£²Î¿¼ÎÄ¼þ  StaticPagesController.java ºÍ staticPages.html¡£ÒÔ¼°spring-mvc.xmlÎÄ¼þÖÐÅäÖÃ<mvc:resources mapping="/jsp/**" location="/WEB-INF/jsp/"/>
+		// 3ã€Spring MVC é™æ€é¡µé¢ã€‚å‚è€ƒæ–‡ä»¶  StaticPagesController.java å’Œ staticPages.htmlã€‚ä»¥åŠspring-mvc.xmlæ–‡ä»¶ä¸­é…ç½®<mvc:resources mapping="/jsp/**" location="/WEB-INF/jsp/"/>
 
-		// 4¡¢Spring MVC Ò³ÃæÖØ¶¨Ïò¡£²Î¿¼ÎÄ¼þ  PageRedirectController.java ºÍ pageRedirectResult.jsp Ò³Ãæ¡£
+		// 4ã€Spring MVC é¡µé¢é‡å®šå‘ã€‚å‚è€ƒæ–‡ä»¶  PageRedirectController.java å’Œ pageRedirectResult.jsp é¡µé¢ã€‚
 		
-		// 5¡¢Spring MVC ±íµ¥±êÇ©¿â¡£²Î¿¼ÎÄ¼þ  Student.java ºÍ StudentController.java ºÍ student.jsp ºÍ studentResult.jsp
-//								²Î¿¼ÎÄ¼þ£º User.java ºÍ UserController.java ºÍ user.jsp ºÍ userResult.jsp
+		// 5ã€Spring MVC è¡¨å•æ ‡ç­¾åº“ã€‚å‚è€ƒæ–‡ä»¶  Student.java å’Œ StudentController.java å’Œ student.jsp å’Œ studentResult.jsp
+//								å‚è€ƒæ–‡ä»¶ï¼š User.java å’Œ UserController.java å’Œ user.jsp å’Œ userResult.jsp
 		
 	}
 }

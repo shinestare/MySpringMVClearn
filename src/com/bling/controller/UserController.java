@@ -23,7 +23,7 @@ public class UserController {
 	}
 	
 	/**
-	 * µ¥Ñ¡°´Å¥µÄindex£¬ÎªÁË²»ºÍ/user³åÍ»£¬¸ÄÁËÃû×Ö
+	 * å•é€‰æŒ‰é’®çš„indexï¼Œä¸ºäº†ä¸å’Œ/userå†²çªï¼Œæ”¹äº†åå­—
 	 * @return
 	 */
 	@RequestMapping(value = "/user2", method = RequestMethod.GET)

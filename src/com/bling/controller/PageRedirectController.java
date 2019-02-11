@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class PageRedirectController {
 
-	// 因为和其他页面的/index冲突，但是都是跳转到同一个页面，所以这里就注释掉了
+	// 鍥犱负鍜屽叾浠栭〉闈㈢殑/index鍐茬獊锛屼絾鏄兘鏄烦杞埌鍚屼竴涓〉闈紝鎵�浠ヨ繖閲屽氨娉ㄩ噴鎺変簡
 	/*@RequestMapping(value="/index", method=RequestMethod.GET)
 	public String index() {
 		return "index";

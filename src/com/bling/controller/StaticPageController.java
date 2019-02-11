@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 /**
- * ÒÔÏÂÊ¾ÀıÏÔÊ¾ÈçºÎÊ¹ÓÃSpring MVC Framework±àĞ´Ò»¸ö¼òµ¥µÄ»ùÓÚWebµÄÓ¦ÓÃ³ÌĞò£¬Ëü¿ÉÒÔÊ¹ÓÃ<mvc:resources>±ê¼Ç·ÃÎÊ¾²Ì¬Ò³ÃæºÍ¶¯Ì¬Ò³Ãæ¡£
+ * ä»¥ä¸‹ç¤ºä¾‹æ˜¾ç¤ºå¦‚ä½•ä½¿ç”¨Spring MVC Frameworkç¼–å†™ä¸€ä¸ªç®€å•çš„åŸºäºWebçš„åº”ç”¨ç¨‹åºï¼Œå®ƒå¯ä»¥ä½¿ç”¨<mvc:resources>æ ‡è®°è®¿é—®é™æ€é¡µé¢å’ŒåŠ¨æ€é¡µé¢ã€‚
  * 
  * @author wangjian31
  *
@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class StaticPageController {
 
 	/**
-	 * Õâ¸ö·½·¨Ê¹ÓÃÓĞÎÊÌâ£¬ÒòÎª·µ»ØindexÖ®ºó£¬Ä¬ÈÏµÄÂ·¾¶ÊÇ/WEB-INF/jsp/index.jsp£¬µ«ÊÇÊµ¼Ê²»ÊÇÕâ¸öÂ·¾¶ÕÒ²»µ½ÎÄ¼ş¡£
+	 * è¿™ä¸ªæ–¹æ³•ä½¿ç”¨æœ‰é—®é¢˜ï¼Œå› ä¸ºè¿”å›indexä¹‹åï¼Œé»˜è®¤çš„è·¯å¾„æ˜¯/WEB-INF/jsp/index.jspï¼Œä½†æ˜¯å®é™…ä¸æ˜¯è¿™ä¸ªè·¯å¾„æ‰¾ä¸åˆ°æ–‡ä»¶ã€‚
 	 * @return
 	 */
 	@RequestMapping(value="/index", method = RequestMethod.GET)

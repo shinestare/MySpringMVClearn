@@ -1,6 +1,13 @@
 eclipse.preferences.version=1
 encoding//WebRoot/WEB-INF/jsp/fileUpload.jsp=UTF-8
 encoding//WebRoot/WEB-INF/jsp/fileUploadResult.jsp=UTF-8
+encoding//src/com/bling/controller/FileUploadController.java=UTF-8
+encoding//src/com/bling/controller/HelloController.java=UTF-8
+encoding//src/com/bling/controller/PageRedirectController.java=UTF-8
+encoding//src/com/bling/controller/StaticPageController.java=UTF-8
 encoding//src/com/bling/controller/StudentController.java=UTF-8
 encoding//src/com/bling/controller/StudentValidationController.java=UTF-8
-encoding/<project>=gbk
+encoding//src/com/bling/controller/UserController.java=UTF-8
+encoding//src/com/bling/others/ResourceNotFoundException.java=UTF-8
+encoding//src/com/bling/others/StudentValidator.java=UTF-8
+encoding//src/com/test/IntroductionMain.java=UTF-8
