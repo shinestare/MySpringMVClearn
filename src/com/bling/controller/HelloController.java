@@ -2,12 +2,12 @@ package com.bling.controller;
 
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.bling.others.ResourceNotFoundException;
-
 import org.springframework.ui.ModelMap;
 
 /**
@@ -24,10 +24,11 @@ import org.springframework.ui.ModelMap;
 @Controller
 @RequestMapping("/hello")
 public class HelloController {
-	
+	private Logger logger = Logger.getLogger(HelloController.class);
 	@RequestMapping(method = RequestMethod.GET)
 	public String printHello(ModelMap model, HttpServletResponse response){
 		boolean dealed = true;
+		logger.error("helloaaaa");
 		if (dealed) {
 			model.addAttribute("message", "Hello Spring MVC Framework!");
 			return "hello";
